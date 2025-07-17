@@ -45,3 +45,67 @@ Movie Details
 ```bash
 git clone https://github.com/your-username/movie-search-ionic.git
 cd movie-search-ionic
+```
+
+---
+
+### 2. Install dependencies:
+```bash
+npm install
+```
+
+---
+
+### 3. Run the app locally:
+```bash
+ionic serve
+```
+This will open the app in your default browser at http://localhost:8100/.
+
+---
+
+### 4. Add your OMDb API Key:
+
+To fetch movie data, you need a valid OMDb API key.
+
+1. Visit https://www.omdbapi.com/apikey.aspx to request a free key.
+2. In your project, open the file src/app/services/movie.service.ts.
+3. Replace the placeholder value in the code:
+
+private apiKey = 'YOUR_OMDB_API_KEY'; // Replace this with your actual key
+
+---
+
+### 5. Build for Android/iOS (optional)
+```bash
+ionic build
+ionic cap add android
+ionic cap open android
+```
+Or for iOS:
+```bash
+ionic cap add ios
+ionic cap open ios
+```
+
+📱 You’ll need Android Studio or Xcode installed to build and test on devices.
+
+---
+
+
+
+## 📁 Folder Structure
+
+| Path                     | Description                        |
+|--------------------------|------------------------------------|
+| `src/`                   | Root source folder                 |
+| ├── `app/`               | Main application folder            |
+| │   ├── `pages/`         | Contains all UI pages              |
+| │   │   ├── `movies/`    | Movie search page components       |
+| │   │   ├── `movie-details/` | Movie details view components  |
+| │   ├── `services/`      | Application services (e.g., API)   |
+| │   └── `app.module.ts`  | Root Angular module                |
+| ├── `assets/`            | Static assets (images, etc.)       |
+| ├── `theme/`             | Global styles and themes           |
+| └── `index.html`         | Main HTML file                     |
+
